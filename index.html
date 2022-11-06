@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador COPA 2022</title>
+    <link rel="stylesheet" href="./src/style.css">
+</head>
+<body>
+    <div class="titulo textoVerde">
+        <img class="logoQatar" src="./src/images/qatar.png" alt="Logo Copa do Mundo Qatar 2022">
+        <h1>SIMULADOR DE PARTIDAS<br>COPA 2022 QATAR<br>GRUPO G</h1>
+    </div>
+    <section class="container">
+        <p class="textoVerde descricao">Este é um simulador de partidas para o grupo G da Copa do Mundo de 2022 no Qatar. O tema é verde e amarelo para nos trazer sorte!</p>
+        
+    </section>
+    <section class="container content">
+        <div>
+            <table>
+                <thead>
+                    <tr>
+                        <th colspan="2" >Classificação</th>
+                        <th>P</th>
+                        <th>SG</th>
+                    </tr>
+                </thead>
+                <tbody id="tabelaPartidas">
+                    <tr>
+                        <td>1</td>
+                        <td id="t0" >Brasil</td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td id="t1">Camarões</td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td id="t2">Suíça</td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td id="t3">Sérvia</td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="wrapperBloco">
+            <!-- 1° rodada -->
+            <div class="bloco">
+                <div class="rodada">
+                    <p>1° Rodada</p>
+                </div>
+                <div class="wrapperPartida">
+                    <div class="partida"><!-- SUI X CAM -->
+                        <div>
+                            <label for="sui">
+                                SUI 
+                                <span>
+                                    <img class="flag" src="./src/images/switzerland.png" alt="Bandeira da Suíça">
+                                </span>
+                            </label>
+                            <input type="number" id="2" class="entrada p1 bordaPadrao sui" value="0" name="sui" onchange="verificaInputs('p1')" min="0">
+                        </div>
+                        <div class="disputa" >X</div>
+                        <div>
+                            <input type="number" id="1" class="entrada p1 bordaPadrao cam" value="0" name="cam" onchange="verificaInputs('p1')" min="0">
+                            <label for="cam">
+                                <span>
+                                    <img class="flag" src="./src/images/cameroon.png" alt="Bandeira do Camarões">
+                                </span>
+                                CAM
+                            </label>
+                        </div>
+                    </div>
+                    <small>QUI 24/11/2022 🏟️ Al Janoub 🕒 07:00</small>
+                </div>
+                <div class="wrapperPartida">
+                    <div class="partida"><!-- BRA X SER -->
+                        <div>
+                            <label for="bra">
+                                BRA
+                                <span>
+                                    <img class="flag" src="./src/images/brazil.png" alt="Bandeira do Brasil">
+                                </span>
+                            </label>
+                            <input type="number" id="0" class="entrada p2 bordaPadrao bra" value="0" name="bra" onchange="verificaInputs('p2')" min="0">
+                        </div>
+                        <div class="disputa" >X</div>
+                        <div>
+                            <input type="number" id="3" class="entrada p2 bordaPadrao ser" value="0" name="ser" onchange="verificaInputs('p2')" min="0">
+                            <label for="ser">
+                                <span>
+                                    <img class="flag" src="./src/images/servia.png" alt="Bandeira da Sérvia">
+                                </span>
+                                SER
+                            </label>
+                        </div>
+                    </div>
+                    <small>QUI 24/11/2022 🏟️ Lusail 🕒 16:00</small>
+                </div>
+            </div>
+            <!-- 2° rodada -->
+            <div class="bloco">
+                <div class="rodada">
+                    <p>2° Rodada</p>
+                </div>
+                <div class="wrapperPartida">
+                    <div class="partida"><!-- CAM X SER -->
+                        <div>
+                            <label for="cam">
+                                CAM
+                                <span>
+                                    <img class="flag" src="./src/images/cameroon.png" alt="Bandeira do Camarões">
+                                </span>
+                            </label>
+                            <input type="number" id="1" class="entrada p3 bordaPadrao cam" value="0" name="cam"  onchange="verificaInputs('p3')" min="0">
+                        </div>
+                        <div class="disputa" >X</div>
+                        <div>
+                            <input type="number" id="3" class="entrada p3 bordaPadrao ser" value="0" name="ser" onchange="verificaInputs('p3')" min="0">
+                            <label for="ser">
+                                <span>
+                                    <img class="flag" src="./src/images/servia.png" alt="Bandeira da Sérvia">
+                                </span>
+                                SER
+                            </label>
+                        </div>
+                    </div>
+                    <small>SEG 28/11/2022 🏟️ Al Janoub 🕒 07:00</small>
+                </div>
+                <div class="wrapperPartida">
+                    <div class="partida"><!-- BRA X SUI -->
+                        <div>
+                            <label for="bra">
+                                BRA
+                                <span>
+                                    <img class="flag" src="./src/images/brazil.png" alt="Bandeira do Brasil">
+                                </span>
+                            </label>
+                            <input type="number" id="0" class="entrada p4 bordaPadrao bra" value="0" name="bra" onchange="verificaInputs('p4')" min="0">
+                        </div>
+                        <div class="disputa" >X</div>
+                        <div>
+                            <input type="number" id="2" class="entrada p4 bordaPadrao sui" value="0" name="sui" onchange="verificaInputs('p4')" min="0">
+                            <label for="sui">
+                                <span>
+                                    <img class="flag" class="flag" src="./src/images/switzerland.png" alt="Bandeira da Suíça">
+                                </span>
+                                SUI 
+                            </label>
+                        </div>
+                    </div>
+                    <small>SEG 28/11/2022 🏟️ Estádio 974 🕒 13:00</small>
+                </div>
+            </div>
+            <!-- 3° rodada -->
+            <div class="bloco">
+                <div class="rodada">
+                    <p>3° Rodada</p>
+                </div>
+                <div class="wrapperPartida">
+                    <div class="partida"><!-- CAM X BRA-->
+                        <div>
+                            <label for="cam">
+                                CAM
+                                <span>
+                                    <img class="flag" src="./src/images/cameroon.png" alt="Bandeira do Camarões">
+                                </span>
+                            </label>
+                            <input type="number" id="1" class="entrada p5 bordaPadrao cam" value="0" name="cam"  onchange="verificaInputs('p5')" min="0">
+                        </div>
+                        <div class="disputa" >X</div>
+                        <div>
+                            <input type="number" id="0" class="entrada p5 bordaPadrao bra" value="0" name="bra" onchange="verificaInputs('p5')" min="0">
+                            <label for="bra">
+                                <span>
+                                    <img class="flag" src="./src/images/brazil.png" alt="Bandeira do Brasil">
+                                </span>
+                                BRA
+                            </label>
+                        </div>
+                    </div>
+                    <small>SEX 02/12/2022 🏟️ Lusail 🕒 16:00</small>
+                </div>
+                <div class="wrapperPartida">
+                    <div class="partida"><!-- SER X SUI -->
+                        <div>
+                            <label for="ser">
+                                SER
+                                <span>
+                                    <img class="flag" src="./src/images/servia.png" alt="Bandeira da Sérvia">
+                                </span>
+                            </label>
+                            <input type="number" id="3" class="entrada p6 bordaPadrao ser" value="0" name="ser" onchange="verificaInputs('p6')" min="0">
+                        </div>
+                        <div class="disputa" >X</div>
+                        <div>
+                            <input  type="number" id="2" class="entrada p6 bordaPadrao sui" value="0" name="sui" onchange="verificaInputs('p6')" min="0">
+                            <label for="sui">
+                                <span>
+                                    <img class="flag" src="./src/images/switzerland.png" alt="Bandeira da Suíça">
+                                </span>
+                                SUI 
+                            </label>
+                        </div>
+                    </div>
+                    <small>SEX 02/12/2022 🏟️ Estádio 974 🕒 16:00</small>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="src\script.js"></script>
+</body>
+</html>
